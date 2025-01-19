@@ -15,7 +15,7 @@ const Header = () => {
         <Button color="inherit" component={Link} to="/Services">
           Services
         </Button>
-        <Box sx={{ mx: 2 }}>
+        <Box sx={{ mx: 1 }}>
         <Button color="inherit" component={Link} to="/Contact">
           Contact
         </Button>
