@@ -1,5 +1,6 @@
 import React from 'react';
 import { AppBar, Toolbar, Typography, Button } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -8,9 +9,18 @@ const Header = () => {
         <Typography variant="h6" sx={{ flexGrow: 1 }}>
           SUMIT
         </Typography>
-        <Button color="inherit">Home</Button>
-        <Button color="inherit">Services</Button>
-        <Button color="inherit">Contact</Button>
+        <Button color="inherit" component={Link} to="/">
+          Home
+        </Button>
+        <Button color="inherit" component={Link} to="/Services">
+          Services
+        </Button>
+        <Button color="inherit" component={Link} to="/Contact">
+          Contact
+        </Button>
+        <Button color="inherit" component={Link} to="/blog">
+          Blog
+        </Button>
       </Toolbar>
     </AppBar>
   );

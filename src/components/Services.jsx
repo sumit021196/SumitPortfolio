@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography, Box } from '@mui/material';
+import { Typography, Box, Grow } from '@mui/material';
 
 const services = [
   { title: 'Web Development', description: 'Modern, responsive websites.' },
@@ -29,23 +29,24 @@ const Services = () => {
         }}
       >
         {services.map((service, index) => (
-          <Box
-            key={index}
-            sx={{
-              width: { xs: '100%', sm: '45%', md: '30%' },
-              p: 3,
-              bgcolor: '#fff',
-              borderRadius: 2,
-              boxShadow: 3,
-              textAlign: 'center',
-              color: 'black', // Ensure text is black
-            }}
-          >
-            <Typography variant="h6" gutterBottom>
-              {service.title}
-            </Typography>
-            <Typography>{service.description}</Typography>
-          </Box>
+          <Grow in={true} timeout={500 * (index + 1)} key={index}>
+            <Box
+              sx={{
+                width: { xs: '100%', sm: '45%', md: '30%' },
+                p: 3,
+                bgcolor: '#fff',
+                borderRadius: 2,
+                boxShadow: 3,
+                textAlign: 'center',
+                color: 'black',
+              }}
+            >
+              <Typography variant="h6" gutterBottom>
+                {service.title}
+              </Typography>
+              <Typography>{service.description}</Typography>
+            </Box>
+          </Grow>
         ))}
       </Box>
     </Box>
