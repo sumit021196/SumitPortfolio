@@ -48,13 +48,13 @@ const Blog = () => {
   return (
     <Box sx={{ p: 0 }}>
       {/* Category Selector */}
-      <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+      <Box sx={{ display: 'flex', justifyContent: 'center' , mb: 2}}>
         <ButtonGroup variant="contained" fullWidth aria-label="outlined primary button group">
           <Button onClick={() => setCategory('All')} sx={{ flexGrow: 1 }}>All</Button>
-          <Button onClick={() => setCategory('Technical')} sx={{ flexGrow: 1 }}>Technical</Button>
+          <Button onClick={() => setCategory('Technical')} sx={{ flexGrow: 1 }}>Tech</Button>
           <Button onClick={() => setCategory('Travel')} sx={{ flexGrow: 1 }}>Travel</Button>
           <Button onClick={() => setCategory('Food')} sx={{ flexGrow: 1 }}>Food</Button>
-          <Button onClick={() => setCategory('Financial')} sx={{ flexGrow: 1 }}>Financial</Button>
+          <Button onClick={() => setCategory('Financial')} sx={{ flexGrow: 1 }}>Fin</Button>
         </ButtonGroup>
       </Box>
 
