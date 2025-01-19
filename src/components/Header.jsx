@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography, Button,Box } from '@mui/material';
+import { AppBar, Toolbar, Typography, Button } from '@mui/material';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
@@ -7,7 +7,7 @@ const Header = () => {
     <AppBar position="sticky" color="primary">
       <Toolbar>
         <Typography variant="h6" sx={{ flexGrow: 1 }}>
-          SUMIT
+          SM
         </Typography>
         <Button color="inherit" component={Link} to="/">
           Home
@@ -15,11 +15,14 @@ const Header = () => {
         <Button color="inherit" component={Link} to="/Services">
           Services
         </Button>
-        <Box sx={{ mx: 1 }}>
-        <Button color="inherit" component={Link} to="/Contact">
+        <Button 
+          color="inherit" 
+          component={Link} 
+          to="/Contact" 
+          sx={{ ml: 2 }} // Add margin to the left of Contact
+        >
           Contact
         </Button>
-        </Box>
         <Button color="inherit" component={Link} to="/blog">
           Blog
         </Button>
