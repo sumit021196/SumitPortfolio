@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography, Button } from '@mui/material';
+import { AppBar, Toolbar, Typography, Button,Box } from '@mui/material';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
@@ -15,9 +15,11 @@ const Header = () => {
         <Button color="inherit" component={Link} to="/Services">
           Services
         </Button>
+        <Box sx={{ mx: 2 }}>
         <Button color="inherit" component={Link} to="/Contact">
           Contact
         </Button>
+        </Box>
         <Button color="inherit" component={Link} to="/blog">
           Blog
         </Button>

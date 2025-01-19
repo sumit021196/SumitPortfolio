@@ -31,6 +31,7 @@ const App = () => {
             <Route path="/testimonials" element={<Testimonials />} />
             <Route path="/contact" element={<ContactForm />} />
             <Route path="/Blog" element={<Blog />} />
+            
           </Routes>
         </Container>
         <Footer />
