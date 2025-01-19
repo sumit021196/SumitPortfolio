@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
-    <AppBar position="sticky" color="primary">
+    <AppBar position="sticky" color="primary" sx={{ mb: 2 }}> {/* Add bottom margin here */}
       <Toolbar>
         <Typography variant="h6" sx={{ flexGrow: 1 }}>
           SM

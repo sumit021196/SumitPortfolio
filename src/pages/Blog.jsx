@@ -1,7 +1,9 @@
-import React from 'react';
-import { Box, Typography, Card, CardContent, CardMedia } from '@mui/material';
+import React, { useState } from 'react';
+import { Box, Typography, Card, CardContent, CardMedia, Button, ButtonGroup } from '@mui/material';
 
 const Blog = () => {
+  const [category, setCategory] = useState('All');
+
   const featuredPost = {
     id: 1,
     title: 'Mastering React: A Comprehensive Guide',
@@ -14,24 +16,48 @@ const Blog = () => {
       id: 2,
       title: 'Material-UI: Tips and Tricks',
       description: 'Enhance your UI development with these essential Material-UI tips.',
+      category: 'Technical',
       image: 'https://via.placeholder.com/300x200', // Replace with your image URL
     },
     {
       id: 3,
-      title: 'State Management in React',
-      description: 'A beginner-friendly introduction to managing state in React applications.',
+      title: 'Exploring the Alps',
+      description: 'A breathtaking travelogue about the scenic Alps.',
+      category: 'Travel',
       image: 'https://via.placeholder.com/300x200', // Replace with your image URL
     },
     {
       id: 4,
-      title: 'Building Responsive Layouts',
-      description: 'Learn how to create stunning responsive layouts for web applications.',
+      title: '10 Easy Recipes for Food Lovers',
+      description: 'Delicious and easy recipes for food enthusiasts.',
+      category: 'Food',
+      image: 'https://via.placeholder.com/300x200', // Replace with your image URL
+    },
+    {
+      id: 5,
+      title: 'Understanding Stock Market Basics',
+      description: 'A beginner’s guide to the world of financial investments.',
+      category: 'Financial',
       image: 'https://via.placeholder.com/300x200', // Replace with your image URL
     },
   ];
 
+  // Filter posts based on the selected category
+  const filteredPosts = category === 'All' ? posts : posts.filter((post) => post.category === category);
+
   return (
-    <Box sx={{ p: 3 }}>
+    <Box sx={{ p: 0 }}>
+      {/* Category Selector */}
+      <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+        <ButtonGroup variant="contained" fullWidth aria-label="outlined primary button group">
+          <Button onClick={() => setCategory('All')} sx={{ flexGrow: 1 }}>All</Button>
+          <Button onClick={() => setCategory('Technical')} sx={{ flexGrow: 1 }}>Technical</Button>
+          <Button onClick={() => setCategory('Travel')} sx={{ flexGrow: 1 }}>Travel</Button>
+          <Button onClick={() => setCategory('Food')} sx={{ flexGrow: 1 }}>Food</Button>
+          <Button onClick={() => setCategory('Financial')} sx={{ flexGrow: 1 }}>Financial</Button>
+        </ButtonGroup>
+      </Box>
+
       {/* Featured Post */}
       <Box
         sx={{
@@ -75,7 +101,7 @@ const Blog = () => {
 
       {/* Articles Section */}
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
-        {posts.map((post) => (
+        {filteredPosts.map((post) => (
           <Card
             key={post.id}
             sx={{
