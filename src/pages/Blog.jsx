@@ -8,7 +8,7 @@ const Blog = () => {
     id: 1,
     title: 'Mastering React: A Comprehensive Guide',
     description: 'Explore the depths of React development with our complete guide to mastering its concepts.',
-    image: 'https://via.placeholder.com/800x400', // Replace with your image URL
+    image: './public/featured-image.png', // Replace with your image URL
   };
 
   const posts = [
