@@ -9,7 +9,7 @@ const Header = () => {
         <Typography variant="h6" sx={{ flexGrow: 1 }}>
           SM
         </Typography>
-        <Button color="inherit" component={Link} to="/">
+        <Button color="inherit" component={Link} to="/Home">
           Home
         </Button>
         <Button color="inherit" component={Link} to="/Services">

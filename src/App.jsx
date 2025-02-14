@@ -10,6 +10,7 @@ import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
 import Blog from './pages/Blog'; // New Blog Component
 
+
 const App = () => {
   return (
     <Router>
@@ -26,6 +27,7 @@ const App = () => {
                 <ContactForm />
               </>
             } />
+            
             <Route path="/services" element={<Services />} />
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/testimonials" element={<Testimonials />} />
