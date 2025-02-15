@@ -9,7 +9,7 @@ import Testimonials from './components/Testimonials';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
 import Blog from './pages/Blog'; // New Blog Component
-import MobileGrid from './components/MobileGrid';
+import MobileGrid from './components/Mobilegrid';
 
 
 const App = () => {
@@ -17,12 +17,13 @@ const App = () => {
     <Router>
       <Box sx={{ bgcolor: '#f5f5f5', minHeight: '100vh' }}>
         <Header />
+          <MobileGrid />
         <Container>
           <Routes>
             <Route path="/" element={
               <>
                 <Hero />
-                <MobileGrid />
+              
                 <Services />
                 <Portfolio />
                 <Testimonials />
