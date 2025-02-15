@@ -18,13 +18,11 @@ const App = () => {
     <Router>
       <Box sx={{ bgcolor: '#f5f5f5', minHeight: '100vh' }}>
         <Header />
-          
         <Container>
           <Routes>
             <Route path="/" element={
               <>
                 <Hero />
-              
                 <Services />
                 <Portfolio />
                 <Testimonials />
