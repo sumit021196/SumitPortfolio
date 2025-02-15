@@ -22,7 +22,7 @@ const App = () => {
             <Route path="/" element={
               <>
                 <Hero />
-                <Services />
+                <MobileGrid />
                 <Portfolio />
                 <Testimonials />
                 <ContactForm />
