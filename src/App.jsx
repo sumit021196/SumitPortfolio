@@ -14,7 +14,6 @@ import MobileGrid from './components/Mobilegrid';
 
 const App = () => {
   return (
-    <MobileGrid />
     <Router>
       <Box sx={{ bgcolor: '#f5f5f5', minHeight: '100vh' }}>
         <Header />
@@ -23,6 +22,7 @@ const App = () => {
             <Route path="/" element={
               <>
                 <Hero />
+               <MobileGrid />
                 <Services />
                 <Portfolio />
                 <Testimonials />
