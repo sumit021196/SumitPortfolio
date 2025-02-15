@@ -22,7 +22,6 @@ const App = () => {
             <Route path="/" element={
               <>
                 <Hero />
-               <MobileGrid />
                 <Services />
                 <Portfolio />
                 <Testimonials />
@@ -30,7 +29,7 @@ const App = () => {
               </>
             } />
             
-            <Route path="/services" element={<Services />} />
+            <Route path="/services" element={<MobileGrid />} />
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/testimonials" element={<Testimonials />} />
             <Route path="/contact" element={<ContactForm />} />
