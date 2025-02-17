@@ -9,8 +9,6 @@ import Testimonials from './components/Testimonials';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
 import Blog from './pages/Blog'; // New Blog Component
-import MobileGrid from './components/MobileGrid';
-
 
 const App = () => {
   return (
@@ -22,14 +20,14 @@ const App = () => {
             <Route path="/" element={
               <>
                 <Hero />
-                <MobileGrid />
+               
                 <Portfolio />
                 <Testimonials />
                 <ContactForm />
               </>
             } />
             
-            <Route path="/services" element={<MobileGrid />} />
+          
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/testimonials" element={<Testimonials />} />
             <Route path="/contact" element={<ContactForm />} />
